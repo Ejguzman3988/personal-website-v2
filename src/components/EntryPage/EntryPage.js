@@ -10,11 +10,13 @@ const EntryPage = () => {
           <img src={logo} alt="logo" className="entry__logo" />{" "}
         </div>
         <div className="entry__back">
-          <div className="entry__info">I'm, </div>
-          <div className="entry__name">Eriberto Guzman</div>
-          <div className="entry__position">Software Engineer</div>
-          <div className="entry__skills">
-            React/Redux/Ruby on Rails/NodeJS/Express
+          <div className="entry__info">
+            <div className="entry__greet">Hi, I'm </div>
+            <div className="entry__name">Eriberto Guzman</div>
+            <div className="entry__position">Software Engineer</div>
+            <div className="entry__skills">
+              React/Redux/Ruby on Rails/NodeJS/Express
+            </div>
           </div>
         </div>
       </div>
