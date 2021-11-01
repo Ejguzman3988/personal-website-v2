@@ -39,7 +39,8 @@
 
 .entry__name {
   font-size: 3rem;
-  transform: translateZ(6rem);
+  transform: translate3d(-200%, 0, 6rem);
+  animation: fade-right 3s linear 7s forwards;
 }
 
 .entry__info {
@@ -49,18 +50,16 @@
 }
 
 .entry__greet {
-  animation: fade-in 2s ease-in 5s forwards;
   text-align: center;
-  font-size: 1.5em;
-  opacity: 0;
 }
 
+.entry__greet,
 .entry__position,
 .entry__skills {
+  opacity: 0;
   font-size: 1.5em;
   transform: translateZ(4rem);
-  opacity: 0;
-  animation: fade-in 2s ease-in 7s forwards;
+  animation: fade-in 2s ease-in 5s forwards;
 }
 
 .entry__logo {

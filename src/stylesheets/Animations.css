@@ -17,6 +17,12 @@
 }
 
 @keyframes fade-right {
+  from {
+    transform: translate3d(-200%, 0, 6rem);
+  }
+  to {
+    transform: translate3d(0%, 0, 6rem);
+  }
 }
 
 /* @keyframes typing {
