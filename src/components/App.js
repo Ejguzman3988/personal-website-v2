@@ -5,6 +5,8 @@ import EntryPage from "./EntryPage/EntryPage";
 import Choices from "./Choices/Choices";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
+import Info from "./Info/Info";
+import Journey from "./Journey/Journey";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={EntryPage} />
           <Route exact path="/choices" component={Choices} />
+          <Route exact path="/info" component={Info} />
+          <Route exact path="/journey" component={Journey} />
         </Switch>
       </Router>
     </div>
