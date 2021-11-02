@@ -1,11 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Choices.css";
 
-const Choices = () => {
+//TODO: BUG WHEN CLICKED MULTIPLE TIMES ON ANIMATION.
+const Choices = (props) => {
+  const [clicked, setClicked] = useState({ info: false, journey: false });
+  const ANI_TIME = 1;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setClicked((prevClicked) => {
+      return {
+        ...prevClicked,
+        [e.target.name]: !prevClicked[e.target.name],
+      };
+    });
+    setTimeout(
+      () => props.history.push(`/${e.target.name}`),
+      (ANI_TIME + 0.25) * 1000
+    );
+  };
+
+  const createAnimation = (active, nonActive) => {
+    // active is the cover screen
+    // non active is the leave screen
+    // both false do nothing
+    if (!active && !nonActive) return null;
+    if (active) {
+      return { animation: `cover-screen ${ANI_TIME}s linear forwards` };
+    } else {
+      return { animation: `leave-screen ${ANI_TIME}s linear forwards` };
+    }
+  };
+
   return (
     <div className="choices">
-      <h1 className="choices__info">Info</h1>
-      <h1 className="choices__journey">Journey</h1>
+      <Link
+        to="/info"
+        className="choices__info"
+        name="info"
+        style={createAnimation(clicked.info, clicked.journey)}
+        onClick={handleClick}
+      >
+        <h1>Info</h1>
+      </Link>
+      <Link
+        to="/journey"
+        className="choices__journey"
+        name="journey"
+        style={createAnimation(clicked.journey, clicked.info)}
+        onClick={handleClick}
+      >
+        <h1>Journey</h1>
+      </Link>
     </div>
   );
 };
