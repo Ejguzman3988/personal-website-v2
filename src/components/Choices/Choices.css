@@ -11,8 +11,15 @@
   align-items: center;
   width: 50%;
   height: 100%;
-  border: red solid;
-  color: tan;
+  color: white;
   display: flex;
   justify-content: center;
+}
+
+.choices__info {
+  background-color: var(--dark-blue);
+}
+
+.choices__journey {
+  background-color: var(--light-blue);
 }

@@ -1,5 +1,6 @@
 import "./App.css";
 import "../stylesheets/Animations.css";
+import "../stylesheets/Variables.css";
 import EntryPage from "./EntryPage/EntryPage";
 import Choices from "./Choices/Choices";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
