@@ -25,6 +25,25 @@
   }
 }
 
+@keyframes cover-screen {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes leave-screen {
+  from {
+    width: 50%;
+    font-size: 1em;
+  }
+  to {
+    width: 0%;
+    font-size: 0;
+  }
+}
+
 /* @keyframes typing {
   from {
     width: 0%;
