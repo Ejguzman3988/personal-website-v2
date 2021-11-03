@@ -1,12 +1,16 @@
 import "./App.css";
 import "../stylesheets/Animations.css";
 import "../stylesheets/Variables.css";
-import EntryPage from "./EntryPage/EntryPage";
-import Choices from "./Choices/Choices";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./NavBar";
-import Info from "./Info/Info";
-import Journey from "./Journey/Journey";
+import {
+  NavBar,
+  Info,
+  Journey,
+  Resume,
+  Projects,
+  Choices,
+  EntryPage,
+} from "./Import";
 
 function App() {
   return (
@@ -18,6 +22,8 @@ function App() {
           <Route exact path="/choices" component={Choices} />
           <Route exact path="/info" component={Info} />
           <Route exact path="/journey" component={Journey} />
+          <Route exact path="/resume" component={Resume} />
+          <Route exact path="/projects" component={Projects} />
         </Switch>
       </Router>
     </div>
