@@ -17,6 +17,10 @@
   text-decoration: none; /* no underline */
 }
 
+.choices__header {
+  pointer-events: none;
+}
+
 .choices__info {
   background-color: var(--dark-blue);
 }

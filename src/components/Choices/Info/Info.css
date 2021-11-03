@@ -1,0 +1,22 @@
+.info__container {
+  background-color: var(--dark-blue);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__resume,
+.info__projects {
+  color: white;
+  background-color: var(--darker-blue);
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  margin: 25px;
+  font-size: 2em;
+}
+
+/* TODO: Add Media to make look better for phone!  */

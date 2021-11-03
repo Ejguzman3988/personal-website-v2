@@ -10,6 +10,7 @@ const Choices = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
     setClicked((prevClicked) => {
+      console.log("FROM SET CLICKED:", e.target.name);
       return {
         ...prevClicked,
         [e.target.name]: !prevClicked[e.target.name],
@@ -42,7 +43,7 @@ const Choices = (props) => {
         style={createAnimation(clicked.info, clicked.journey)}
         onClick={handleClick}
       >
-        <h1>Info</h1>
+        <h1 className="choices__header">Info</h1>
       </Link>
       <Link
         to="/journey"
@@ -51,7 +52,7 @@ const Choices = (props) => {
         style={createAnimation(clicked.journey, clicked.info)}
         onClick={handleClick}
       >
-        <h1>Journey</h1>
+        <h1 className="choices__header">Journey</h1>
       </Link>
     </div>
   );
